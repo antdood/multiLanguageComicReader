@@ -8,7 +8,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def main():
-	return 'manhwas_list'
+	manhwa_list = os.listdir(f"{BASE_DIR}/static/manhwas")
+	return render_template(f'main.html', manhwa_list = manhwa_list)
 
 @app.route('/manhwas/<manhwa_name>')
 def show_manhwa(manhwa_name):

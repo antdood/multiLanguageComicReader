@@ -1,0 +1,18 @@
+<!DOCTYPE = html>
+<html>
+
+<head>
+	<title>
+		Main Menu
+	</title>
+</head>
+
+<body>
+	<div id = "manhwa_list">
+		{% for manhwa in manhwa_list %}
+		<a href = "https://kaede.pythonanywhere.com/manhwas/{{manhwa}}"> manhwa </a>
+		{$ endfor %}
+	</div>
+</body>
+
+</html>
