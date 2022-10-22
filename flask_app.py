@@ -1,4 +1,5 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
@@ -8,4 +9,5 @@ def main():
 
 @app.route('/manhwas/<manhwa_name>')
 def show_manhwa():
-	return 
+    pages = os.listdir(f"manhwas/{manhwa_name}")
+	return render_template('report.html', pages = )
