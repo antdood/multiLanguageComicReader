@@ -1,5 +1,5 @@
-var eng_div = getElementById('eng');
-var kor_div = getElementById('kor');
+var eng_div = document.getElementById('eng');
+var kor_div = document.getElementById('kor');
 
 function show_eng()
 {
