@@ -13,5 +13,4 @@ def main():
 @app.route('/manhwas/<manhwa_name>')
 def show_manhwa(manhwa_name):
 	pages = os.listdir(f"{BASE_DIR}/manhwas/{manhwa_name}")
-	print(pages)
 	return render_template(f'manhwa.html', pages = pages)
