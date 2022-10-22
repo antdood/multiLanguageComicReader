@@ -1,13 +1,24 @@
 <!DOCTYPE=html>
 <html>
+
+<script src="{{url_for('static', filename='manhwacontroller.js')}}"></script>
+
 <head>
     <title>
         Title
     </title>
 </head>
-<body>
+<body id = "eng">
     {% for page in pages %}
-    <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/' + page)}}" alt="{{page}}">
+    <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/eng/' + page)}}" alt="{{page}}">
     {% endfor %}
 </body>
-</html>`
+
+<body id = "kor">
+    {% for page in pages %}
+    <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/kor/' + page)}}" alt="{{page}}">
+    {% endfor %}
+</body>
+
+
+</html>
