@@ -6,16 +6,18 @@
         Title
     </title>
 </head>
-<body id = "eng">
-    {% for page in eng_pages %}
-    <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/eng/' + page)}}" alt="{{page}}">
-    {% endfor %}
-</body>
+<body>
+    <div id = "eng">
+        {% for page in eng_pages %}
+        <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/eng/' + page)}}" alt="{{page}}">
+        {% endfor %}
+    </div>
 
-<body id = "kor">
-    {% for page in kor_pages %}
-    <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/kor/' + page)}}" alt="{{page}}">
-    {% endfor %}
+    <div id="kor">
+        {% for page in kor_pages %}
+        <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/kor/' + page)}}" alt="{{page}}">
+        {% endfor %}
+    </div>
 </body>
 
 <script src="{{url_for('static', filename='manhwacontroller.js')}}"></script>
