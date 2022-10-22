@@ -12,6 +12,6 @@ def main():
 
 @app.route('/manhwas/<manhwa_name>')
 def show_manhwa(manhwa_name):
-	eng_pages = os.listdir(f"{BASE_DIR}/static/manhwas/eng/{manhwa_name}")
-	kor_pages = os.listdir(f"{BASE_DIR}/static/manhwas/kor/{manhwa_name}")
+	eng_pages = os.listdir(f"{BASE_DIR}/static/manhwas/{manhwa_name}/eng")
+	kor_pages = os.listdir(f"{BASE_DIR}/static/manhwas/{manhwa_name}/kor")
 	return render_template(f'manhwa.html', eng_pages = eng_pages, kor_pages = kor_pages, manhwa_name = manhwa_name)
