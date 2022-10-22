@@ -9,5 +9,5 @@ def main():
 
 @app.route('/manhwas/<manhwa_name>')
 def show_manhwa(manhwa_name):
-	pages = os.listdir(f"manhwas/{manhwa_name}")
-	return render_template('manhwa.html', pages = pages)
+	pages = os.listdir(f"/home/kaede/multiLanguageComicReader/manhwas/{manhwa_name}")
+	return flask.render_template('manhwa.html', pages = pages)
