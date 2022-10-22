@@ -9,5 +9,5 @@ def main():
 
 @app.route('/manhwas/<manhwa_name>')
 def show_manhwa():
-    pages = os.listdir(f"manhwas/{manhwa_name}")
+	pages = os.listdir(f"manhwas/{manhwa_name}")
 	return render_template('report.html', pages = )
