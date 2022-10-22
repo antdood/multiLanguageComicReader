@@ -1,5 +1,17 @@
-var eng_div = document.getElementById('eng');
-var kor_div = document.getElementById('kor');
+var eng_div;
+var kor_div;
+
+if(document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', afterLoaded);
+} else {
+    afterLoaded();
+}
+
+afterLoaded() {
+	eng_div = document.getElementById('eng');
+	kor_div = document.getElementById('kor');
+};
+
 
 function show_eng()
 {
