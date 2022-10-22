@@ -2,6 +2,8 @@ from flask import Flask
 from flask import render_template
 import os
 
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -10,5 +12,5 @@ def main():
 
 @app.route('/manhwas/<manhwa_name>')
 def show_manhwa(manhwa_name):
-	pages = os.listdir(f"/home/kaede/multiLanguageComicReader/manhwas/{manhwa_name}")
-	return render_template('manhwa.html', pages = pages)
+	pages = os.listdir(f"{BASE_DIR}/manhwas/{manhwa_name}")
+	return render_template(f'{BASE_DIR}/manhwa.html', pages = pages)
