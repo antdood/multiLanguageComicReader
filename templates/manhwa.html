@@ -9,13 +9,13 @@
 <body>
     <div id = "eng">
         {% for page in eng_pages %}
-        <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + chapter_name + '/eng/' + page)}}" alt="{{page}}">
+        <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/' + chapter_name + '/eng/' + page)}}" alt="{{page}}">
         {% endfor %}
     </div>
 
     <div id="kor">
         {% for page in kor_pages %}
-        <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + chapter_name + '/kor/' + page)}}" alt="{{page}}">
+        <img src="{{url_for('static', filename = 'manhwas/' + manhwa_name + '/' + chapter_name + '/kor/' + page)}}" alt="{{page}}">
         {% endfor %}
     </div>
 </body>
