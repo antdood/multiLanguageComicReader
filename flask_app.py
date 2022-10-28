@@ -12,7 +12,7 @@ def main():
 	return render_template(f'main.html', manhwa_list = manhwa_list)
 
 @app.route('/manhwas/<manhwa_name>')
-def show_chapters(manhwa_name)
+def show_chapters(manhwa_name):
 	chapter_list = os.listdir(f"{BASE_DIR}/static/manhwas/{manhwa_name}")
 	return render_template(f'chapters.html', chapter_list = chapter_list, manhwa_name = manhwa_name)
 
